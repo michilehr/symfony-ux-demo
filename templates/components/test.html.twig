@@ -1,0 +1,21 @@
+<div {{ attributes }}>
+
+   This input field does not get a reset after submitted by hitting the enter key.
+
+    {{ form_start(form, {
+        attr: {
+            'data-action': 'live#action:prevent',
+            'data-live-action-param': 'submit',
+        }
+    }) }}
+    {{ form_row(form.barcode) }}
+    <button
+            type="submit"
+    >Submit
+    </button>
+    {{ form_end(form) }}
+
+    <div data-loading>
+        loading
+    </div>
+</div>
